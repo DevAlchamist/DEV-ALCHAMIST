@@ -1,5 +1,7 @@
 "use client";
 import React, { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -8,7 +10,6 @@ const Contact = () => {
     message: "",
   });
 
-  const [error, setError] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (e) => {
@@ -24,16 +25,17 @@ const Contact = () => {
 
     // Basic validation
     if (!formData.name || !formData.email || !formData.message) {
-      setError("Please fill in all fields");
+      toast.error("Please fill in all fields", { theme: "dark" });
       return;
     }
 
-    setError("");
-
-    // Simulate form submission (you can replace this with an API call)
     try {
+      // Simulate form submission (you can replace this with an API call)
       console.log("Form submitted:", formData);
       setSubmitted(true);
+      toast.success("Your message has been sent successfully!", {
+        theme: "dark",
+      });
       // Reset the form
       setFormData({
         name: "",
@@ -42,31 +44,25 @@ const Contact = () => {
       });
     } catch (error) {
       console.error("Error submitting form:", error);
+      toast.error("Failed to send message", { theme: "dark" });
     }
   };
+
   return (
     <div className="w-full mt-10 text-center flex flex-col items-center justify-center gap-5">
+      <ToastContainer />
       <div className="flex flex-col">
         <div className="font-extrabold text-[45px] font-mono capitalize">
           Get in Touch
         </div>
         <div className="text-[14px] bg-gradient-to-r from-[#4FC3F7] to-white text-transparent bg-clip-text">
-          Lets Work Together
+          Let's Work Together
         </div>
       </div>
       <div className="text-start w-[696px]">
-        {submitted && (
-          <p className="text-green-500 mb-4">
-            Your message has been sent successfully!
-          </p>
-        )}
-        {error && <p className="text-red-500 mb-4">{error}</p>}
-        <form onSubmit={handleSubmit} className="w-full" >
+        <form onSubmit={handleSubmit} className="w-full">
           <div className="mb-4 ">
-            <label
-              className="block text-sm text-white font-bold"
-              htmlFor="name"
-            >
+            <label className="block text-sm text-white font-bold" htmlFor="name">
               Name
             </label>
             <input
@@ -80,10 +76,7 @@ const Contact = () => {
             />
           </div>
           <div className="mb-4">
-            <label
-              className="block text-sm text-white font-bold"
-              htmlFor="email"
-            >
+            <label className="block text-sm text-white font-bold" htmlFor="email">
               Email
             </label>
             <input
@@ -97,10 +90,7 @@ const Contact = () => {
             />
           </div>
           <div className="mb-4">
-            <label
-              className="block text-sm text-white font-bold"
-              htmlFor="message"
-            >
+            <label className="block text-sm text-white font-bold" htmlFor="message">
               Message
             </label>
             <textarea
