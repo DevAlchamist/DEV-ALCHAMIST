@@ -9,6 +9,7 @@ import Now from '../components/sections/Now.astro'
 import CVCard from '../components/sections/CVCard.astro'
 import ExperienceCard from '../components/sections/ExperienceCard.astro'
 import StudyCard from '../components/sections/StudyCard.astro'
+const ogImage = new URL('https://imgur.com/c9lzosM')
 //
 ---
 
@@ -38,8 +39,7 @@ import StudyCard from '../components/sections/StudyCard.astro'
 <BaseLayout
   title="Dev Alchamist - Shubhanshu Nayak - Full Stack Developer"
   description="Shubhanshu Nayak - Full Stack Developer - Portfolio, Projects, CV, About Me, Contact, Timezone, Now, Experience, Tattoo, Study"
-  ogImage="/public/me.png"
-
+  ogImage={ogImage}
 >
   <div
     slot="loader"

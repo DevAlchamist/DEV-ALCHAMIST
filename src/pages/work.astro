@@ -3,6 +3,7 @@ import { WORK } from '../lib/constants'
 import BaseLayout from '../layouts/BaseLayout.astro'
 import TopLayout from '../layouts/TopLayout.astro'
 import BottomLayout from '../layouts/BottomLayout.astro'
+const ogImage = new URL('https://imgur.com/c9lzosM')
 
 import { EXPERIENCE } from '../lib/constants'
 ---
@@ -10,7 +11,7 @@ import { EXPERIENCE } from '../lib/constants'
 <BaseLayout
   title={WORK.TITLE}
   description={WORK.DESCRIPTION}
-  ogImage="/public/me.png"
+  ogImage={ogImage}
 >
   <main class="flex min-h-[80vh] flex-auto flex-col" transition:animate="fade">
     <TopLayout>

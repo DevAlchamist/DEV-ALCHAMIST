@@ -8,6 +8,7 @@ import ProjectCard from '../components/ProjectCard.astro'
 import { contentfulClient } from '../lib/contentful'
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
 import type { EntryFieldTypes } from 'contentful'
+const ogImage = new URL('https://imgur.com/c9lzosM')
 
 interface Project {
   contentTypeId: 'Projects'
@@ -25,7 +26,7 @@ const entries = await contentfulClient.getEntries<Project>({})
 <BaseLayout
   title="Portfolio"
   description="Projects and some clone's that I did"
-  ogImage="/public/me.png"
+  ogImage={ogImage}
 >
   <main class="flex min-h-[80vh] flex-auto flex-col" transition:animate="slide">
     <TopLayout>
