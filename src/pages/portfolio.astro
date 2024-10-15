@@ -25,6 +25,7 @@ const entries = await contentfulClient.getEntries<Project>({})
 <BaseLayout
   title="Portfolio"
   description="Projects and some clone's that I did"
+  ogImage="/public/me.png"
 >
   <main class="flex min-h-[80vh] flex-auto flex-col" transition:animate="slide">
     <TopLayout>
