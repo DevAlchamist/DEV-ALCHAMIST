@@ -1,0 +1,44 @@
+[
+	{
+		"name": "Skill Scape AI",
+		"description": "AI-driven skill assessment and learning platform.",
+		"image": "/assets/images/projects/skill-scape.png",
+		"url": "https://github.com/DevAlchamist/skill_scape"
+	},
+	{
+		"name": "Pixie Art Generator",
+		"description": "Transform your photos into stunning artistic styles with our AI-powered generator. From anime to oil paintings, create beautiful memories in seconds.",
+		"image": "/assets/images/projects/pixie_art_gen.png",
+		"url": "https://pixie-art-generator.vercel.app/"
+	},
+	{
+		"name": "Task Verse",
+		"description": "Simple Task Management and Skill Assessment Platform inspired by CMS",
+		"image": "/assets/images/projects/task-verse.png",
+		"url": "https://github.com/DevAlchamist/skill_scape"
+	},
+	{
+		"name": "Sho-ol",
+		"description": "Customizable school dashboards with attendance, inventory, and academic tracking",
+		"image": "/assets/images/projects/shool.png",
+		"url": "https://dns.surf"
+	},
+	{
+		"name": "Task Mate",
+		"description": "Scribble your tasks and ideas.",
+		"image": "/assets/images/projects/task-mate.png",
+		"url": "https://task-mate.vercel.app/"
+	},
+	{
+		"name": "Cine Verse",
+		"description": "Movie exploration and recommendation platform.",
+		"image": "/assets/images/projects/cineverse.png",
+		"url": "https://cine-verse.vercel.app/"
+	},
+	{
+		"name": "Shop-Pulse",
+		"description": "E-commerce trends and analytics tracking platform.",
+		"image": "/assets/images/projects/shop-pulse.png",
+		"url": "https://sink.cool"
+	}
+]

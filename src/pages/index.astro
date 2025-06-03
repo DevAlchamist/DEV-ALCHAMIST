@@ -1,85 +1,74 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro'
-import IntroCard from '../components/sections/IntroCard.astro'
-import AboutMe from '../components/sections/AboutMe.astro'
-import Card from '../components/Card.astro'
-import TimeZoneCard from '../components/sections/TimeZoneCard.astro'
-import ContactsCard from '../components/sections/ContactsCard.astro'
-import Now from '../components/sections/Now.astro'
-import CVCard from '../components/sections/CVCard.astro'
-import ExperienceCard from '../components/sections/ExperienceCard.astro'
-import StudyCard from '../components/sections/StudyCard.astro'
-const ogImage = new URL('https://imgur.com/c9lzosM')
-//
+import Button from "../components/button.astro";
+import Projects from "../components/home/projects.astro";
+import Separator from "../components/home/separator.astro";
+import Layout from "../layouts/main.astro";
 ---
 
-<script>
-  import { stagger, spring, timeline, type TimelineDefinition } from 'motion'
-  import { loaderAnimation } from '../lib/constants'
-
-  const cards = document.querySelectorAll('.card-animate')
-
-  const sequence = [
-    loaderAnimation,
-    [
-      cards,
-      { y: ['40%', '0%'], opacity: [0, 1] },
-      {
-        at: '-0.1',
-        duration: 0.4,
-        delay: stagger(0.3),
-        easing: spring({ velocity: 100, stiffness: 50, damping: 10 }),
-      },
-    ],
-  ]
-
-  timeline(sequence as TimelineDefinition)
-</script>
-
-<BaseLayout
-  title="Dev Alchamist - Shubhanshu Nayak - Full Stack Developer"
-  description="Shubhanshu Nayak - Full Stack Developer - Portfolio, Projects, CV, About Me, Contact, Timezone, Now, Experience, Tattoo, Study"
-  ogImage={ogImage}
->
+<Layout title="Shubhanshu">
   <div
-    slot="loader"
-    class="loader bg-darkslate-700 fixed bottom-0 left-0 right-0 top-0 z-50 flex h-screen w-screen items-center justify-center text-3xl font-black uppercase text-neutral-50"
+    class="relative z-20 w-full max-w-4xl mx-auto mt-16 px-7 md:mt-24 lg:mt-32 xl:px-0"
   >
-  </div>
-  <main
-    class="relative m-auto grid w-full max-w-6xl gap-2 overflow-hidden p-2 sm:gap-2 sm:p-4 md:grid-cols-2 md:gap-3 md:p-6 lg:grid-cols-4 lg:grid-rows-8 lg:gap-4"
-  >
-    <IntroCard />
-    <AboutMe />
-    <CVCard />
-    <Now />
-    <Card
-      colSpan="md:col-span-1"
-      rowSpan="md:row-span-2"
-      title="Portfolio & Projects"
-      href="/portfolio"
-    />
-    <TimeZoneCard />
-    <ContactsCard />
-    <ExperienceCard />
-    <Card colSpan="md:col-span-2" rowSpan="md:row-span-1">
-      <div class="flex h-full flex-col justify-between">
-        <blockquote class="mt-6 border-l-2 pl-6 italic">
-          “Anything one man can imagine, other men can make real.”
-        </blockquote>
-        <p class="mt-2 text-xs">- Jules Verne</p>
+    <div class="flex flex-col items-center md:flex-row">
+      <div class="relative w-full md:w-1/2">
+        <h1
+          class="mb-5 text-4xl font-bold leading-tight md:text-4xl lg:text-6xl dark:text-white"
+        >
+          Hello, I'm Shubhanshu.
+        </h1>
+        <p class="mb-6 text-base text-neutral-600 dark:text-neutral-400">
+          I'm a front-end programmer living in New Delhi. <br
+            class="hidden lg:block"
+          />I focus on Web development.
+        </p>
+        <p class="mb-2 font-semibold text-neutral-800 dark:text-neutral-200">
+          I can help you out with:
+        </p>
+        <ul
+          class="py-2 space-y-[3px] text-sm list-disc list-inside text-neutral-500 dark:text-neutral-400"
+        >
+          <li>Web Applications</li>
+          <li>Front-end development</li>
+          <li>Back-end Development</li>
+          <li>Website Templates</li>
+          <li>and more...</li>
+        </ul>
+        <Button text="Follow me on Instagram" link="https://www.instagram.com/irl_introvert/" />
+        <Button text="Follow me on Linkdin" link="https://www.linkedin.com/in/shubhanshu-nayak-9332562a4/" />
       </div>
-    </Card>
-    <!-- <TattooCard /> -->
-    <!-- <StudyCard /> -->
-    <Card colSpan="md:col-span-1" rowSpan="md:row-span-1">
-      <p class="text-xs">
-        © 2023 · Crafted with ♥️ using <a
-          href="https://astro.build/"
-          target="_blank"
-          class="text-red-500">Astro</a
-        > by Shubhanshu Nayak.
-      </p>
-    </Card>
-  </main>
-</BaseLayout>
+      <div
+        class="relative justify-end hidden w-full mt-10 md:flex md:pl-10 md:w-1/2 md:mt-0 md:translate-y-4 xl:translate-y-0"
+      >
+        <div class="relative z-50 w-full">
+          <div
+            class="absolute bottom-0 z-40 w-16 h-16 -translate-x-6 -translate-y-1/2 lg:top-auto top-0 lg:-translate-y-[330px] rounded-full"
+          >
+            <span
+              class="relative z-20 flex items-center justify-center w-full h-full text-2xl border-8 border-white rounded-full dark:border-neutral-950 bg-neutral-100 dark:bg-neutral-900"
+            >
+              <span
+                class="flex items-center justify-center w-full h-full bg-white border border-dashed rounded-full dark:bg-neutral-950 border-neutral-300 dark:border-neutral-700"
+                >👋</span
+              >
+            </span>
+          </div>
+          <div class="relative z-30 px-10">
+            <img
+              src="/assets/images/photo.png"
+              loading="eager"
+              decoding="auto"
+              class="relative z-30 w-full aspect-[790/1189] md:max-w-md mx-auto dark:-translate-y-0.5"
+            />
+          </div>
+          <div
+            class="absolute bottom-0 right-0 z-20 w-full h-full lg:h-[420px] translate-x-0 -translate-y-px border border-dashed rounded-2xl bg-gradient-to-r dark:from-neutral-950 dark:via-black dark:to-neutral-950 from-white via-neutral-50 to-white border-neutral-300 dark:border-neutral-700"
+          >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <Separator text="Check out my projects" />
+  <Projects />
+</Layout>

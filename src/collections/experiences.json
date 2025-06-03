@@ -1,0 +1,37 @@
+[
+	{
+		"dates": "Mar 2025 · Apr 2025",
+		"role": "Full-Stack Developer",
+		"company": "Xploroo",
+		"description": "Responsible for handling the front-end and back-end development of a travel platform and hosting service.",
+		"logo": "/assets/images/experiences/xploroo.ico"
+	},
+	{
+		"dates": "Sep 2024 · Nov 2024",
+		"role": "Sr. Web Developer",
+		"company": "Info Tech Edge",
+		"description": "Responsible for single handedly developing and maintaining web applications, including deployment and server management on CPanel.",
+		"logo": "/assets/images/experiences/infotech_edge.ico"
+	},
+	{
+		"dates": "Jun 2024 · July 2024 ",
+		"role": "MERN Stack Developer",
+		"company": "Code Sculpt Solutions",
+		"description": "Intern, involved in the development Skuriya a platform inspired by Fiverr for Artists and Creators.",
+		"logo": "/assets/images/experiences/codesculpt.ico"
+	},
+	{
+		"dates": "Apr 2024 · July 2024 ",
+		"role": "MERN Stack Developer",
+		"company": "Banao Technologies",
+		"description": "Intern, involved in the development of Procurpal a platform for procurement and supply chain management for small business. Handling the backend development using Serverless and dynamodb.",
+		"logo": "/assets/images/experiences/Banao.ico"
+	},
+	{
+		"dates": "Jun 2024 · July 2024 ",
+		"role": "MERN Stack Developer",
+		"company": "Code Sculpt Solutions",
+		"description": "Intern, involved in the various scripts and web applications also automating the event scheduling via Google Calendar API.",
+		"logo": "/assets/images/experiences/freelance.ico"
+	}
+]
