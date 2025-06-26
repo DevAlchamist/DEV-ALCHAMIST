@@ -1,5 +1,5 @@
 ---
-const { name, description, url, image } = Astro.props;
+const { name, description, url, image, status } = Astro.props;
 ---
 
 <a
@@ -17,7 +17,10 @@ const { name, description, url, image } = Astro.props;
     class="relative z-30 block duration-300 ease-out group-hover:-translate-x-1 group-hover:-translate-y-1"
   >
     <span class="block w-full">
-      <img src={image} class="w-full h-auto rounded-lg aspect-[16/9] object-cover" />
+      <img
+        src={image}
+        class="w-full h-auto rounded-lg aspect-[16/9] object-cover"
+      />
     </span>
     <span class="block w-full px-1 mt-5 mb-1 sm:mt-3">
       <span
@@ -30,36 +33,53 @@ const { name, description, url, image } = Astro.props;
           version="1.1"
           xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink"
-          ><g
+        >
+          <g
             stroke="none"
             stroke-width="1"
             fill="none"
             fill-rule="evenodd"
             stroke-linecap="round"
             stroke-linejoin="round"
-            ><g
+          >
+            <g
               id="svg"
               transform="translate(0.666667, 2.333333)"
               stroke="currentColor"
               stroke-width="2.4"
-              ><g
-                ><polyline
+            >
+              <g>
+                <polyline
                   class="transition-all duration-200 ease-out opacity-0 delay-0 group-hover:opacity-100"
-                  points="5.33333333 0 10.8333333 5.5 5.33333333 11"
-                ></polyline><line
+                  points="5.33333333 0 10.8333333 5.5 5.33333333 11"></polyline>
+                <line
                   class="transition-all duration-200 ease-out transform -translate-x-1 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 group-hover:ml-0"
                   x1="10.8333333"
                   y1="5.5"
                   x2="0.833333333"
-                  y2="5.16666667"></line></g
-              ></g
-            ></g
-          ></svg
-        >
+                  y2="5.16666667"></line>
+              </g>
+            </g>
+          </g>
+        </svg>
       </span>
-      <span class="text-sm text-neutral-600 dark:text-neutral-400 block truncate"
+      <span
+        class="text-sm text-neutral-600 dark:text-neutral-400 block truncate"
         >{description}</span
       >
+    </span>
+
+    <!-- Status Badge -->
+    <span
+      class={`mt-2 inline-block text-xs font-medium px-2 py-1 rounded-full ${
+        status === "active"
+          ? "bg-green-500 text-white"
+          : status === "inactive"
+            ? "bg-gray-500 text-white"
+            : "bg-yellow-500 text-black"
+      }`}
+    >
+      {status}
     </span>
   </span>
 </a>
