@@ -72,9 +72,9 @@ const { name, description, url, image, status } = Astro.props;
     <!-- Status Badge -->
     <span
       class={`mt-2 inline-block text-xs font-medium px-2 py-1 rounded-full ${
-        status === "active"
+        status === "Personal"
           ? "bg-green-500 text-white"
-          : status === "inactive"
+          : status === "Company"
             ? "bg-gray-500 text-white"
             : "bg-yellow-500 text-black"
       }`}
