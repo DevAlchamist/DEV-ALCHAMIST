@@ -1,12 +1,5 @@
 [
   {
-    "name": "D247",
-    "description": "An casino-betting application build under company",
-    "image": "/assets/images/projects/D247.png",
-    "url": "https://d247.com",
-    "status": "Company"
-  },
-  {
     "name": "Skill Scape AI",
     "description": "AI-driven skill assessment and learning platform.",
     "image": "/assets/images/projects/skill-scape.png",
